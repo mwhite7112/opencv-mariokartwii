@@ -1,0 +1,24 @@
+import cv2 as cv
+
+def capture_10():
+    cap = cv.VideoCapture(0)
+    pic = 0
+    count = 0
+    while cap.isOpened():
+        ret, frame = cap.read()
+        count += 1
+        if count % 3 == 0:
+            file_name = 'ToadsFactory'
+            cv.imwrite(f'Images/Courses/{file_name}_{pic}.png',frame)
+            pic += 1
+        if count == 550:
+            break
+
+def capture_1():
+    cap = cv.VideoCapture(0)
+    ret, frame = cap.read()
+    file_name = 'None_7'
+    cv.imwrite(f'Images/Courses/{file_name}.png', frame)
+    print('yes')
+
+capture_10()
