@@ -17,8 +17,8 @@ def capture_10():
 def capture_1():
     cap = cv.VideoCapture(0)
     ret, frame = cap.read()
-    file_name = 'None_7'
-    cv.imwrite(f'Images/Courses/{file_name}.png', frame)
+    file_name = 'None_0'
+    cv.imwrite(f'Images/MenuScreen/{file_name}.png', frame)
     print('yes')
 
-capture_10()
+capture_1()
